@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_Lab_2._2"
         mc:Ignorable="d"
         Title="Задание по GUI Проект 2 по заданию на String" Height="195" Width="380">
-    <Grid HorizontalAlignment="Center" Width="380" Height="178" VerticalAlignment="Top">
+    <Grid HorizontalAlignment="Center" Width="380" Height="193" VerticalAlignment="Top" Margin="0,-15,0,0" RenderTransformOrigin="0.5,0.514">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="40*"/>
@@ -14,7 +14,8 @@
         <Button Content="Выполнить" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,-0.138" Width="114" Click="Button_Click" Height="20"/>
         <TextBox x:Name="textbox2" TextWrapping="Wrap" Margin="38,109,38,0" Height="26" VerticalAlignment="Top"/>
         <TextBox x:Name="textbox1" TextWrapping="Wrap" Margin="38,78,38,0" Height="26" VerticalAlignment="Top"/>
-        <TextBlock x:Name="AnswerBlock" TextWrapping="Wrap" Grid.Column="1" Margin="18,78,18,43"/>
+        <TextBlock x:Name="AnswerBlock" TextWrapping="Wrap" Grid.Column="1" Margin="18,78,18,58"/>
+        <Button Content="очистить" Grid.Column="1" HorizontalAlignment="Left" Margin="69,140,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

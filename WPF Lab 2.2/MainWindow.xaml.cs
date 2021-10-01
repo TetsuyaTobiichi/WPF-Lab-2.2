@@ -108,6 +108,13 @@ namespace WPF_Lab_2._2
                 e.Handled = true;
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            textbox1.Text = string.Empty;
+            textbox2.Text = string.Empty;
+            AnswerBlock.Text = string.Empty;
+        }
     }
     }
 
