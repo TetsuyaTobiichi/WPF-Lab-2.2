@@ -115,6 +115,11 @@ namespace WPF_Lab_2._2
             textbox2.Text = string.Empty;
             AnswerBlock.Text = string.Empty;
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Даны два слова. Для каждой буквы первого слова определить, входит ли она во второе слово.  Повторяющиеся буквы первого слова не рассматривать. Например, если заданные слова процессор и информация, то для букв первого из них ответом должно быть: нет да да да нет нет.");
+        }
     }
     }
 
