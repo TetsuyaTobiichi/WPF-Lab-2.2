@@ -100,15 +100,6 @@ namespace WPF_Lab_2._2
         {
             AnswerBlock.Text = Logic.FindSimilarLetters(Logic.DelDup(textbox1.Text), Logic.DelDup(textbox2.Text));
         }
-
-        private void textbox2_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            if(!Regex.Match(e.Text, @"^[a-zа-я]+$", RegexOptions.IgnoreCase).Success)
-            {
-                e.Handled = true;
-            }
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             textbox1.Text = string.Empty;
@@ -119,6 +110,14 @@ namespace WPF_Lab_2._2
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Даны два слова. Для каждой буквы первого слова определить, входит ли она во второе слово.  Повторяющиеся буквы первого слова не рассматривать. Например, если заданные слова процессор и информация, то для букв первого из них ответом должно быть: нет да да да нет нет.");
+        }
+
+        private void textbox1_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
+        {
+            if (!Regex.Match(e.Text, @"^[a-zа-я]+$", RegexOptions.IgnoreCase).Success)
+            {
+                e.Handled = true;
+            }
         }
     }
     }
