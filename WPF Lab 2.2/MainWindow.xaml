@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Lab_2._2"
         mc:Ignorable="d"
-        Title="Задание по GUI Проект 2 по заданию на String" Height="195" Width="380">
-    <Grid HorizontalAlignment="Center" Width="380" Height="193" VerticalAlignment="Top" Margin="0,-15,0,0" RenderTransformOrigin="0.5,0.514">
+        Title="Задание по GUI Проект 2 по заданию на String" Height="195" Width="380" Closed="Window_Closed">
+    <Grid HorizontalAlignment="Center" Width="380" Height="194" VerticalAlignment="Top" Margin="0,-16,0,0" RenderTransformOrigin="0.5,0.514">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Выполнить" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,-0.138" Width="114" Click="Button_Click" Height="20"/>
-        <TextBox x:Name="textbox2" TextWrapping="Wrap" Margin="38,109,38,0" Height="26" VerticalAlignment="Top" PreviewTextInput="textbox1_PreviewTextInput_1"/>
-        <TextBox x:Name="textbox1" TextWrapping="Wrap" Margin="38,78,38,0" Height="26" VerticalAlignment="Top" PreviewTextInput="textbox1_PreviewTextInput_1"/>
+        <Button x:Name="Button" Content="Выполнить" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,-0.138" Width="114" Click="Button_Click" Height="20"/>
+        <TextBox x:Name="textbox2" TextWrapping="Wrap" Margin="38,109,38,0" Height="26" VerticalAlignment="Top" PreviewTextInput="textbox1_PreviewTextInput_1" KeyDown="textbox2_KeyDown"/>
+        <TextBox x:Name="textbox1" TextWrapping="Wrap" Margin="38,78,38,0" Height="26" VerticalAlignment="Top" PreviewTextInput="textbox1_PreviewTextInput_1" KeyDown="textbox1_KeyDown"/>
         <TextBlock x:Name="AnswerBlock" TextWrapping="Wrap" Grid.Column="1" Margin="18,78,18,58"/>
         <Button Content="очистить" Grid.Column="1" HorizontalAlignment="Left" Margin="69,140,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click_1"/>
         <Button Content="прочитать задание" Grid.ColumnSpan="2" Margin="134,19,134,150" Click="Button_Click_2"/>

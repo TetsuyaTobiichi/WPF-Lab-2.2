@@ -1,5 +1,6 @@
 ﻿ using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -86,6 +87,10 @@ namespace WPF_Lab_2._2
         public MainWindow()
         {
             InitializeComponent();
+            StreamReader reader = new StreamReader("text.txt");
+            textbox1.Text = reader.ReadLine();
+            textbox2.Text = reader.ReadLine();
+            reader.Close();
         }
 
         private void textbox1_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -119,6 +124,26 @@ namespace WPF_Lab_2._2
                 e.Handled = true;
             }
         }
-    }
-    }
 
+        private void textbox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter && textbox1.Text != string.Empty)
+            {
+                textbox2.Focus();
+            }
+        }
+
+        private void textbox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key ==Key.Enter && textbox2.Text != string.Empty)
+            {
+                AnswerBlock.Text = Logic.FindSimilarLetters(Logic.DelDup(textbox1.Text), Logic.DelDup(textbox2.Text));
+            }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            File.WriteAllText("text.txt", $"{textbox1.Text}\n{textbox2.Text}");
+        }
+    }
+    }
