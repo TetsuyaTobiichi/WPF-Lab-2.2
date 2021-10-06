@@ -140,10 +140,9 @@ namespace WPF_Lab_2._2
                 AnswerBlock.Text = Logic.FindSimilarLetters(Logic.DelDup(textbox1.Text), Logic.DelDup(textbox2.Text));
             }
         }
-
         private void Window_Closed(object sender, EventArgs e)
         {
             File.WriteAllText("text.txt", $"{textbox1.Text}\n{textbox2.Text}");
         }
     }
-    }
+}
