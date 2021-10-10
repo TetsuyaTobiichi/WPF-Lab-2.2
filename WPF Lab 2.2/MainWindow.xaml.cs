@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,10 +20,8 @@ namespace WPF_Lab_2._2
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public class Logic
+    public static class Logic
     {
-        //начало логики
-        //функция удаляет из строк повторяющиеся буквы
         public static string DelDup(string s)
         {
             int check = 0;
@@ -51,7 +49,6 @@ namespace WPF_Lab_2._2
             WithOutDup = temp;
             return WithOutDup;
         }
-        //функция ищет похожие буквы в 2-х строках введеных пользователем
         public static string FindSimilarLetters(string SecondWord, string FirstWord)
         {
             int Check = 0;
@@ -79,7 +76,6 @@ namespace WPF_Lab_2._2
             }
             return ReturnResult;
         }
-        //конец логики
     }
 
     public partial class MainWindow : Window
